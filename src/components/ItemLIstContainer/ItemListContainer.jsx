@@ -1,7 +1,36 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ItemList } from './ItemList';
+import {productos} from './productos.js';
 
 export const ItemListContainer = () => {
+
+  const [listaProductos, setListaProductos] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  const traerDatos = () => {
+    return new Promise( (resolve, reject) => {
+      setTimeout(() => {
+        resolve(productos)
+      }, 3000)
+    })
+  }
+
+  useEffect( () => {
+    setLoading(true)
+
+    traerDatos()
+      .then((res) => {
+        setListaProductos( res )
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+    }, [])
+
+  
   
   // const promesa = (res) => {
   //   return new Promise( (resolve, reject) => {
@@ -31,8 +60,12 @@ export const ItemListContainer = () => {
   // }, [])
 
   return (
-    <section>
-      <ItemList />
-    </section>
+    <>
+      {
+        loading
+        ? <h2>Loading...</h2>
+        : <ItemList productos={listaProductos} />
+      }
+    </>
   );
 };

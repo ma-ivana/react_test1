@@ -1,20 +1,16 @@
 import { Item } from './Item';
-import {productos} from './productos.js';
+// import {productos} from './productos.js';
 
 
-export const ItemList = () => {
+export const ItemList = ( { productos }) => {
 
-//   const pedirDatos = () => {
-//     return new Promise( (resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(productos)
-//         }, 3000)
-//     })
-// }
   console.log(productos)
   return (
-        productos.map( producto => <Item key={producto.id} {...producto}/>
-
-      
-  ));
+        <div className='productContainer'>
+          <h1>Productos</h1>
+          <div className='productRow'>
+            {productos.map( producto => <Item key={producto.id} {...producto}/>)}
+          </div>
+        </div>
+  );
 };

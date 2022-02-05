@@ -3,10 +3,10 @@ export const Item = ({ title, description, price, pictureUrl }) => {
 
   return (
     <div className="tarjeta">
-      <h1>{title} </h1>
+      <h3>{title} </h3>
       <p>{description} </p>
-      <p>{price} </p>
-      <div>
+      <p>Precio: ${price} </p>
+      <div className="cardImg">
           <img src={pictureUrl} />
       </div>
     </div>   
