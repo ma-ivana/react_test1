@@ -1,5 +1,5 @@
 import { ItemListContainer } from "./components/ItemLIstContainer/ItemListContainer";
-import { ItemList } from './components/ItemLIstContainer/ItemList';
+import { ItemDetailContainer } from './components/ItemLIstContainer/ItemDetailContainer';
 import { NavBar } from "./components/NavBar";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <ItemListContainer /> } />
         <Route path='/languages/:catId' element={ <ItemListContainer/> }/>
-        <Route path='/detail/:itemId' element={ <ItemListContainer/> }/>
+        <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
         <Route path='/nosotros' element={ <Nosotros /> } />
         <Route path='/contacto' element={ <Contacto /> } />
         <Route path='*' element={ <Navigate to='/'/> }/>

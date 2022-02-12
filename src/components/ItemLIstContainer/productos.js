@@ -5,7 +5,8 @@ export const productos = [
     description: "12 classes",
     price: 100,
     pictureUrl: 'https://freepngimg.com/thumb/android/31223-4-android-transparent-background.png',
-    category: "react"
+    category: "react",
+    stock: 10
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export const productos = [
     description: "12 classes",
     price: 200,
     pictureUrl: 'https://cdn.player.one/sites/player.one/files/styles/lg/public/2016/07/05/google-android-mascot.png',
-    category: "javascript"
+    category: "javascript",
+    stock: 10
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export const productos = [
     description: "12 classes",
     price: 300,
     pictureUrl: 'https://www.freeiconspng.com/thumbs/android-icon/green-android-icon-31.png',
-    category: "next"
+    category: "next",
+    stock: 10
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ export const productos = [
     description: "12 classes",
     price: 400,
     pictureUrl: 'https://www.freeiconspng.com/thumbs/android-icon/green-android-icon-31.png',
-    category: "html"
+    category: "html",
+    stock: 10
   },
   {
     id: 5,
@@ -37,6 +41,7 @@ export const productos = [
     description: "12 classes",
     price: 500,
     pictureUrl: 'https://freepngimg.com/thumb/android/31223-4-android-transparent-background.png',
-    category: "css"
+    category: "css",
+    stock: 10
   }
 ]

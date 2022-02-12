@@ -27,6 +27,7 @@ code {
   width: 100%;
   text-align: center;
   background-color: black;
+  line-height: 90px;
 }
 
 .productRow {
@@ -38,7 +39,7 @@ code {
 .tarjeta {
   margin: 5px;
   width: 250px;
-  height: 350px;
+  height: 380px;
   background-color: rgb(15, 95, 95);
   display:flex;
   justify-content: center;
@@ -71,8 +72,12 @@ code {
 
 .tarjeta:hover {
   width: 280px;
-  height: 380px;
+  height: 395px;
   background-color: rgb(7, 73, 73);
   color:rgb(180, 184, 181);
 }
 
+.botonBootstrap {
+  margin-top: 12px;
+  background-color: rgb(32, 31, 31) !important;
+}

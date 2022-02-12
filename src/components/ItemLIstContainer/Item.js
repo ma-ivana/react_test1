@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
+import { Button } from "react-bootstrap";
 
-export const Item = ({ title, description, price, pictureUrl }) => {
+export const Item = ({ id, title, description, price, pictureUrl }) => {
 
   return (
     <div className="tarjeta">
@@ -9,6 +11,9 @@ export const Item = ({ title, description, price, pictureUrl }) => {
       <div className="cardImg">
           <img src={pictureUrl} />
       </div>
+      <Link to={`/detail/${id}`}>
+        <Button className="botonBootstrap" variant="primary">Ver más</Button>
+      </Link>
     </div>   
 
   );
