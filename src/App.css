@@ -16,8 +16,17 @@
 .navbar-brand{
 
   padding-top: 0 !important ;
-  padding-bottom: 0 !important ;
+  padding-bottom: 0 !important;
+}
 
+.navbar-nav {
+  width: 40% !important;
+}
+
+.menuLink, menuLink:link, menuLink:visited, menuLink:hover, menuLink:active {
+  color:rgb(148, 143, 143) !important;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .logo {
@@ -28,10 +37,6 @@
 
 .logo img {
   width: 100%;
-}
-
-.navbar {
-  background-color: black;
 }
 
 .menu1 {

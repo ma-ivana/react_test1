@@ -3,15 +3,25 @@ import { ItemList } from './components/ItemLIstContainer/ItemList';
 import { NavBar } from "./components/NavBar";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Contacto } from "./components/Contacto";
+import { Nosotros } from "./components/Nosotros";
 
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer />
+      <Routes>
+        <Route path='/' element={ <ItemListContainer /> } />
+        <Route path='/languages/:catId' element={ <ItemListContainer/> }/>
+        <Route path='/detail/:itemId' element={ <ItemListContainer/> }/>
+        <Route path='/nosotros' element={ <Nosotros /> } />
+        <Route path='/contacto' element={ <Contacto /> } />
+        <Route path='*' element={ <Navigate to='/'/> }/>
+      </Routes>
     
-    </>
+    </BrowserRouter>
   );
 }
 

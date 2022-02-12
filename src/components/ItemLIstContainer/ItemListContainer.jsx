@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { ItemList } from './ItemList';
-import {productos} from './productos.js';
+import { productos } from './productos.js';
+import { useParams } from 'react-router-dom';
 
 export const ItemListContainer = () => {
 
   const [listaProductos, setListaProductos] = useState([])
   const [loading, setLoading] = useState(false)
+
+  const { catId } = useParams()
 
   const traerDatos = () => {
     return new Promise( (resolve, reject) => {
@@ -20,7 +23,11 @@ export const ItemListContainer = () => {
 
     traerDatos()
       .then((res) => {
-        setListaProductos( res )
+        if (catId){
+        setListaProductos( res.filter(el => el.category === catId) )
+        } else {
+          setListaProductos(res)
+        }
       })
       .catch((err) => {
         console.log(err)
@@ -28,42 +35,15 @@ export const ItemListContainer = () => {
       .finally(() => {
         setLoading(false)
       })
-    }, [])
+    }, [catId])
 
   
   
-  // const promesa = (res) => {
-  //   return new Promise( (resolve, reject) => {
-  //     setTimeout( () => {
-  //       if (res === true) {
-  //         resolve('Promesa resuelta')
-  //       } else {
-  //         reject('Promesa rechazada')
-  //       }
-  //     }, 2000)
-  //   }) 
-  // }
-
-  // useEffect(() => {
-  //   console.log(promesa)
-
-  //   promesa
-  //     .then( (res) => {
-  //       console.log(res)
-  //     })
-  //     .catch( (err) => {
-  //       console.log(err)
-  //     })
-  //     .finally(() => {
-  //       console.log("Proceso finalizado")
-  //     })
-  // }, [])
-
   return (
     <>
       {
-        loading
-        ? <h2>Loading...</h2>
+        loading 
+        ? <h2>Loading...</h2> 
         : <ItemList productos={listaProductos} />
       }
     </>
