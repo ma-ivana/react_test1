@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Contacto = () => {
+export const Contact = () => {
 
   return <div className='container'>
-      <h2>Contacto</h2>
+      <h2>Contact</h2>
       <hr/>
   </div>;
 };

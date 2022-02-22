@@ -1,27 +1,31 @@
-import { ItemListContainer } from "./components/ItemLIstContainer/ItemListContainer";
-import { ItemDetailContainer } from './components/ItemLIstContainer/ItemDetailContainer';
-import { NavBar } from "./components/NavBar";
-import "./App.css";
+import "./styles/styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { Contacto } from "./components/Contacto";
-import { Nosotros } from "./components/Nosotros";
+import { NavBar } from "./components/NavBar/NavBar";
+import { ItemListContainer } from "./components/ItemLIstContainer/ItemListContainer";
+import { ItemDetailContainer } from './components/ItemLIstContainer/ItemDetailContainer';
+import { Contact } from "./components/Contact";
+import { Us } from "./components/Us";
+import { CartProvider } from "./context/CartContext";
+import { Cart } from "./components/Cart/Cart";
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={ <ItemListContainer /> } />
-        <Route path='/languages/:catId' element={ <ItemListContainer/> }/>
-        <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
-        <Route path='/nosotros' element={ <Nosotros /> } />
-        <Route path='/contacto' element={ <Contacto /> } />
-        <Route path='*' element={ <Navigate to='/'/> }/>
-      </Routes>
-    
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={ <ItemListContainer /> } />
+          <Route path='/languages/:catId' element={ <ItemListContainer/> }/>
+          <Route path='/detail/:itemId' element={ <ItemDetailContainer/> }/>
+          <Route path='/us' element={ <Us /> } />
+          <Route path='/contact' element={ <Contact /> } />
+          <Route path='/cart' element={ <Cart /> } />
+          <Route path='*' element={ <Navigate to='/'/> }/>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

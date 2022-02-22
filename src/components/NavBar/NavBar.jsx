@@ -1,8 +1,8 @@
-import { CartWidget } from "./CartWidget";
+import { CartWidget } from "../CartWidget";
 import Navbar from 'react-bootstrap/Navbar';
 import { Container, Nav, NavDropdown } from "react-bootstrap";
-import things from '../images/things.png';
-import '../App.css';
+import things from '../../images/things_dream.png';
+import './NavBar.scss';
 import {Link} from 'react-router-dom';
 
 

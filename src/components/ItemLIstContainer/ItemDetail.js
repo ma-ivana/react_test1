@@ -7,21 +7,21 @@ import { ItemCount } from "../ItemCount/ItemCount"
 
 export const ItemDetail = ({id, title, pictureUrl, description, price, stock, category}) => {
 
-    // const [cantidad, setCantidad] = useState(0)
+    const [cantidad, setCantidad] = useState(0)
 
-    // const { agregarAlCarrito, isInCart } = useContext(CartContext)
+    const { agregarAlCarrito, isInCart } = useContext(CartContext)
 
-    // const handleAgregar = () => {
-    //     if (cantidad === 0) return
+    const handleAgregar = () => {
+        if (cantidad === 0) return
 
-    //     if (!isInCart(id)) {
-    //         const addItem = {
-    //             id, title, price, stock, cantidad
-    //         }
+        if (!isInCart(id)) {
+            const addItem = {
+                id, title, price, stock, cantidad
+            }
     
-    //         agregarAlCarrito(addItem)
-    //     }
-    // }
+            agregarAlCarrito(addItem)
+        }
+    }
 
     return (
         <div className="tarjeta">
@@ -33,7 +33,7 @@ export const ItemDetail = ({id, title, pictureUrl, description, price, stock, ca
       </div>
       <p>More details coming soon...</p>
 
-            {/* {
+            {
                 isInCart(id) 
                 ?  <Link to="/cart" className="btn btn-success my-3">
                         Check-out
@@ -53,7 +53,7 @@ export const ItemDetail = ({id, title, pictureUrl, description, price, stock, ca
                             Add to cart
                         </button>
                     </>
-            } */}
+            }
         </div>
     )
 }
