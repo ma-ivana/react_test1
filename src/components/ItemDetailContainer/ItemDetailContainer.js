@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
-import { ItemDetail } from '../ItemLIstContainer/ItemDetail';
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { productos } from '../../data/productos.js';
 
 export const ItemDetailContainer = () => {
@@ -13,7 +13,7 @@ export const ItemDetailContainer = () => {
     return new Promise( (resolve, reject) => {
       setTimeout(() => {
         resolve(productos)
-      }, 3000)
+      }, 2000)
     })
   }
 

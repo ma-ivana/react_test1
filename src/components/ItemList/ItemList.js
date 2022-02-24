@@ -1,5 +1,5 @@
 import './ItemList.scss';
-import { Item } from '../ItemLIstContainer/Item';
+import { Item } from '../Item/Item';
 
 
 export const ItemList = ( { productos }) => {

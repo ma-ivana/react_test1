@@ -1,13 +1,13 @@
-import "./styles/styles.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { NavBar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/ItemLIstContainer/ItemListContainer";
-import { ItemDetailContainer } from './components/ItemLIstContainer/ItemDetailContainer';
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Contact } from "./components/Contact";
 import { Us } from "./components/Us";
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
+import "./styles/styles.scss";
 
 
 function App() {
