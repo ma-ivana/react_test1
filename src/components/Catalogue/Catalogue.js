@@ -1,8 +1,8 @@
-import './ItemList.scss';
+import './Catalogue.scss';
 import { Item } from '../Item/Item';
 
 
-export const ItemList = ( { productos }) => {
+export const Catalogue = ( { productos }) => {
 
   console.log(productos)
   return (

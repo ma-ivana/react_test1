@@ -40,7 +40,7 @@ export const Cart = () => {
 
                 <div className="my-2">
                     <button className="btn btn-danger" onClick={vaciarCart}>Emtpy cart</button>
-                    <button className="btn btn-success mx-2">Checkout</button>
+                    <Link to="/checkout" className="btn btn-success mx-2">Checkout</Link>
                 </div>
             </div>
         

@@ -26,11 +26,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: fill;
+  }
 }
 
-.cardImg img {
-  width: 100%;
-}
+
 
 .tarjeta:hover {
   width: 280px;

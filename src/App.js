@@ -7,6 +7,7 @@ import { Contact } from "./components/Contact";
 import { Us } from "./components/Us";
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
+import { Checkout } from "./components/Checkout/Checkout";
 import "./styles/styles.scss";
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/us' element={ <Us /> } />
           <Route path='/contact' element={ <Contact /> } />
           <Route path='/cart' element={ <Cart /> } />
+          <Route path='/checkout' element={ <Checkout />} />
           <Route path='*' element={ <Navigate to='/'/> }/>
         </Routes>
       </BrowserRouter>
